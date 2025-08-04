@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.header{
+    width: 100%;
+    background-image: url(images/Animated\ weather\ icons\ -\ Alex\ Fedotov\ \(1\).gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.head{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.head h1{
+    font-size: 2.5rem;
+    color: whitesmoke;
+}
+.Input{
+    height: 20vh;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.Input input{
+    width: 50%;
+    height: 40%;
+    background: none;
+    border: 2px solid #39ff14;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 1rem;
+    color: whitesmoke;
+    font-size: 1.1rem;
+}
+.Input input::placeholder{
+    color: whitesmoke;
+}
+
+.Input .fa-magnifying-glass{
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: #39ff14;
+    color: whitesmoke;
+    width: 60px;
+    font-weight: 700;
+    height: 45px;
+    position: relative;
+    right: 3.85rem;
+    display: flex;
+    justify-content: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    align-items: center;
+}
+.wether-pic{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.temp{
+    display: flex;
+    justify-content: center;
+}
+
+.wether-pic img{
+    width: 250px;
+    height: 130px;
+    object-fit: cover;
+}
+.icons{
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.icon-1{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 9.8rem;
+    gap: 0.4rem;
+    bottom: 1.5rem;
+}
+.icons i{
+    position: relative;
+    top: -1.5rem;
+}
+.icon-2{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 9.8rem;
+    gap: 0.4rem;
+        bottom: 1.5rem;
+
+}
