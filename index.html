@@ -1,65 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SkyCast – Your Smart Daily Weather Companion</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="images/apple-touch-icon.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <div class="container">
-      <div class="header">
-        <div class="head">
-          <h1>SkyCast - Check Wether</h1>
-        </div>
-        <div class="Input">
-          <input type="text" name="" id="input" placeholder="Enter a City Name" />
-          <button class="fa-solid fa-magnifying-glass"></button>
-        </div>
-        <div class="invalid">
-          <p style="margin-left: 19rem; margin-top: -1.5rem; color:whitesmoke; display: none;">Invalid City Name</p>
-        </div>
-        
-        <div class="wether-pic">
-          <img src="images/clouds.png" class="WetherIcon" style="margin-right: 2rem; position: relative; top: 0.5rem;" alt="" />
-          <div class="city">
-            <p style="font-size: 6rem; margin-right: 1.3rem; color: whitesmoke; margin-top: 1rem;">27°C</p>
+        <div class="header">
+            <div class="head">
+                <h1>🌤 Weather App</h1>
+            </div>
+
+            <div class="Input">
+                <input type="text" id="cityInput" placeholder="Enter city name">
+                <button onclick="getWeather()">Search</button>
+            </div>
+
+            <div class="invalid">
+                <p id="error"></p>
+            </div>
+
+            <div class="wether-pic">
+                <img id="weatherIcon" class="WetherIcon" src="" alt="">
+                <div class="city">
+                    <p id="cityName">--</p>
+                </div>
+            </div>
 
             <div class="temp">
-              <h1 style="color: whitesmoke; margin-right: 1.3rem; font-size: 2.3rem">New York</h1>
+                <h1 id="temperature">--°C</h1>
             </div>
-          </div>
+
+            <div class="icons">
+                <div class="icon-1">
+                    <h3>Humidity</h3>
+                    <h2 id="humidity">--%</h2>
+                </div>
+                <div class="icon-2">
+                    <h3>Wind Speed</h3>
+                    <h2 id="wind">-- km/h</h2>
+                </div>
+            </div>
         </div>
-        <div class="icons">
-          <i
-            class="fa-solid fa-list"
-            style="margin-left: 2.5rem; font-size: 4rem; color: whitesmoke"
-           ></i>
-          <div class="icon-1">
-            <h3 style="color: whitesmoke; font-size: 1.7rem">93%</h3>
-            <h2 style="color: whitesmoke; font-size: 1.7rem">Humidity</h2>
-          </div>
-          <i
-            class="fa-solid fa-wind"
-            style="margin-right: 2.5rem; font-size: 4rem; color: whitesmoke"
-          ></i>
-          <div class="icon-2">
-            <h3 style="color: whitesmoke; font-size: 1.7rem">120.3Km/h</h3>
-            <h2 style="color: whitesmoke; font-size: 1.7rem">Air Speed</h2>
-          </div>
-        </div>
-      </div>
     </div>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
